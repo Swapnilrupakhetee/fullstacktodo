@@ -94,14 +94,36 @@
     background-color: rgba(97, 100, 97, 0.192);
     border-radius: 6px;
     padding: 10px 20px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    
+
+  }
+  .modaladd:hover{
+    background-color: rgba(97, 100, 97, 0.411);
+    border-radius: 6px;
+    padding: 10px 20px;
+    transition: 0.3s ease-in-out;
     
 
   }
   .modalcancel{
     border: 1px solid white;
     border-radius: 6px;
-    
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
   }
+  .modalcancel:hover{
+    border: 1px solid white;
+    background-color: rgba(70, 70, 70, 0.322);
+    border-radius: 6px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+
+
   @media (min-width:000px) and (max-width:600px) {
     .modal-content {
       background: rgba(39, 39, 39, 0.959);

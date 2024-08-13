@@ -1,0 +1,97 @@
+
+  .project-details{
+    background-color: black;
+    height: 100vh;
+    color: white;
+  }
+  .project-title-todo{
+    border: 1px solid rgb(184, 184, 184);
+    width: fit-content;
+    margin: 0 auto;
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    text-align: center;
+    font-weight: 100;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgb(134, 134, 134);
+    cursor: pointer;
+    transition: 1s ease-in-out;
+    
+  }
+  .project-title-todo:hover{
+    border: 1px solid rgb(184, 184, 184);
+    width: fit-content;
+    margin: 0 auto;
+    
+    background-color: rgba(255, 255, 255, 0.144);
+    padding: 10px 30px;
+    
+    text-align: center;
+    font-weight: 100;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgb(134, 134, 134);
+    cursor: pointer;
+    transition: 1s ease-in-out;
+    
+  }
+  .work{
+    color: rgb(255, 251, 39);
+  }
+
+  .mid-contents{
+    justify-content: center;
+   gap: 1rem;
+   margin-top: 3rem;
+    display: flex;
+  }
+  .todo-list{
+    background-color: rgba(73, 73, 73, 0.26);
+    border-radius: 10px;
+    border: 1px solid rgb(39, 39, 39);
+    width: 75%;
+  }
+  .music-right{
+    width: 20%;
+    
+  }
+  .todo-list h2{
+    margin-top: 10px;
+    text-align: center;
+  }
+  .todo-top{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+    gap: 1rem;
+  }
+
+  .search{
+    display: flex;
+    background-color: rgba(94, 95, 95, 0.267);
+    color: white;
+    border-radius: 10px;
+    padding: 5px 20px;
+    align-items: center;
+    width: 90%;
+  }
+  .search input{
+    width: 100%;
+    background-color: transparent;
+  }
+  .search input:focus{
+    outline: none;
+  }
+  .addtodo{
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 3rem;
+  }
+  .sea{
+    cursor: pointer;
+    font-size: 2rem;
+  }

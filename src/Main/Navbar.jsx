@@ -5,12 +5,14 @@ import { IoSettingsOutline } from "react-icons/io5";
 import swapnil from '../assets/swapnil.jpeg'
 import { IoStatsChartOutline } from "react-icons/io5";
 import { MdOutlineLightMode } from "react-icons/md";
+import { Link } from 'react-router-dom';
+
 const Navbar = () => {
   return (
     <div className="dnav-container">
         <div className="dnav-content">
             <div className="dnav-links">
-                <div className="dnav-link"><GoHome /></div>
+                <div className="dnav-link"><Link to='/dashboard'><GoHome /></Link></div>
                 <div className="dnav-link"><IoStatsChartOutline /></div>
                 <div className="dnav-link"><IoSettingsOutline /></div>
                 <div className="dnav-link"><MdOutlineLightMode /></div>
