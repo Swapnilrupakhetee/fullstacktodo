@@ -14,7 +14,13 @@ const HeroNav = () => {
             Todo
           </di>
           <div className="hero-cta">
-            Start Now
+          <div className="login">
+              Log in
+            </div>
+            <div className="signup">
+              Sign up
+            </div>
+            
           </div>
         </div>
         

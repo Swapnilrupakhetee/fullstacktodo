@@ -22,6 +22,33 @@
     font-weight: 300;
 }
 .hero-cta{
+    display: flex;
+    gap: 1rem;
+    
+}
+.login{
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    border: 1px solid rgba(128, 128, 128, 0.63);
+    background-color: rgba(70, 70, 70, 0.212);
+    padding: 5px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.login:hover{
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    border: 1px solid rgba(128, 128, 128, 0.63);
+    background-color: rgba(70, 70, 70, 0.486);
+    padding: 5px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.signup{
     color: white;
     font-size: 14px;
     font-weight: 400;
@@ -31,7 +58,7 @@
     cursor: pointer;
     transition: 0.3s ease-in-out;
 }
-.hero-cta:hover{
+.signup:hover{
     color: white;
     font-size: 14px;
     font-weight: 400;
