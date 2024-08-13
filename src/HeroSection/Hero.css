@@ -3,6 +3,8 @@
     height: 100vh;
     overflow: hidden;
     width: 100%;
+    background-image: url('../assets/heromain.jpg');
+    background-size: cover;
 }
 .hero-nav-container{
     border-bottom: 1px solid rgb(58, 58, 58);
