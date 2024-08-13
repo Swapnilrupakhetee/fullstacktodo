@@ -1,17 +1,13 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Hero from './HeroSection/Hero'
+import { Routes, Route } from 'react-router-dom';
+import HeroNav from './HeroSection/HeroNav';
+
 
 function App() {
-
-
   return (
-    <>
-      <Hero/>
-    </>
-  )
+    <Routes>
+      <Route exact path="/" element={<HeroNav/>} />
+    </Routes>
+  );
 }
 
-export default App
+export default App;

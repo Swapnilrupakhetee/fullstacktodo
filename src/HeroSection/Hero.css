@@ -1,10 +1,17 @@
+.hero-c{
+    background-color: black;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url('../assets/heromain.jpg');
+    background-size: cover;
+}
 .hero-container{
     background-color: black;
     height: 100vh;
     overflow: hidden;
     width: 100%;
-    background-image: url('../assets/heromain.jpg');
-    background-size: cover;
+    
+    
 }
 .hero-nav-container{
     border-bottom: 1px solid rgb(58, 58, 58);
@@ -17,6 +24,11 @@
     align-items: center;
     margin: 0 auto;
     
+}
+.hero-button2{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 .logo{
     color: white;

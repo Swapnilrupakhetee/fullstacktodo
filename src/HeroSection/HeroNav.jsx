@@ -3,10 +3,14 @@ import logo from '../assets/logo.png'
 import { FaArrowRight } from "react-icons/fa6";
 import { BsStars } from "react-icons/bs";
 import heroimg from '../assets/heroimg.png'
-
+import { Link } from 'react-router-dom';
+import './Hero.css'
 
 const HeroNav = () => {
   return (
+    <div className="hero-c">
+
+    
     <div className="heronav-container ">
       <div className="hero-nav-container">
         <div className="navbar">
@@ -39,7 +43,10 @@ const HeroNav = () => {
           No more clutter, no more stress.
         </div>
         <div className="hero-button">
-          Get Started for free <FaArrowRight className='arrow'/>
+          <Link to='/dashboard' className='hero-button2'>
+            Get Started for free <FaArrowRight className='arrow'/>
+          </Link>
+          
         </div>
       </div>
       <div className="hero-image">
@@ -50,6 +57,7 @@ const HeroNav = () => {
         
            
         
+    </div>
     </div>
   )
 }
