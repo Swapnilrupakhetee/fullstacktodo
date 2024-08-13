@@ -1,8 +1,15 @@
 import React from 'react'
-
+import './Dashboard.css'
+import Navbar from './Navbar'
 const Dashboard = () => {
   return (
-    <div>Dashboard</div>
+    <div className="dash-container">
+      <div className="dash-content">
+        <Navbar/>
+        
+
+      </div>
+    </div>
   )
 }
 

@@ -1,0 +1,48 @@
+.dash-container{
+
+}
+.dash-content{
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    color: white;
+}
+
+.dnav-container{
+    margin-top: 2rem;
+}
+.dnav-content{
+
+}
+.dnav-links{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    border: 1px solid gray;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 10px 30px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgba(192, 192, 192, 0.658);
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+.dnav-links img{
+    width: 36px;
+    border-radius: 50%;
+}
+.dnav-link{
+    font-size: 2rem;
+    transition: 0.3s ease-in-out;
+}
+.dnav-link:hover{
+    color: gray;
+    transition: 0.3s ease-in-out;
+}
+.dnav-links:hover{
+    background-color: rgba(128, 128, 128, 0.37);
+    box-shadow: 1px 1px 4px rgba(192, 192, 192, 0.658);
+    color: white;
+    transition: 0.3s ease-in-out;
+}
