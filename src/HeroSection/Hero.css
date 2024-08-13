@@ -1,0 +1,196 @@
+.hero-container{
+    background-color: black;
+    height: 100vh;
+    overflow: hidden;
+    width: 100%;
+}
+.hero-nav-container{
+    border-bottom: 1px solid rgb(58, 58, 58);
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+    width: 80%;
+    align-items: center;
+    margin: 0 auto;
+    
+}
+.logo{
+    color: white;
+    font-size: 18px;
+    font-weight: 300;
+}
+.hero-cta{
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    background-color: rgb(70, 70, 70);
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.hero-cta:hover{
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    background-color: rgb(48, 48, 48);
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.tiny-title{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    background-color: rgb(46, 46, 46);
+    color: rgb(165, 164, 164);
+    border: 1px solid rgb(77, 77, 77);
+    width: fit-content;
+    padding: 0px 10px;
+    border-radius: 10px;
+    font-size: 12px;
+    margin: 0 auto;
+}
+.star{
+    color: yellow;
+}
+.hero-message{
+    margin-top: 5rem;
+}
+.hero-title {
+    max-width:50% ;
+    
+    margin-top: 1rem;
+    font-size: 76px;
+    text-align: center;
+    line-height: 70px;
+    font-weight: 500;
+    background: linear-gradient(90deg, #b8b8b8, #e5e5e5, #b8b8b8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent; /* This makes the gradient visible */
+    padding: 1rem;
+    margin: 0 auto;
+}
+.hero-sub{
+    margin: 0 auto;
+    text-align: center;
+    max-width: 400px;
+    color: grey;
+    font-weight: 400;
+    margin-top: 1rem;
+    padding: 0rem 1rem;
+
+}
+.hero-button{
+    background-color: white;
+    font-size: 12px;
+    width: fit-content;
+    border-radius: 6px;
+    padding: 5px 10px;
+    display: flex;
+    gap: 5px;
+    cursor: pointer;
+    align-items: center;
+    margin: 0 auto;
+    transition: 0.3s ease-in-out;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}
+.hero-button:hover{
+    background-color: rgba(255, 255, 255, 0.822);
+   
+    transition: 0.3s ease-in-out;
+}
+.hero-image{
+
+}
+.hero-img-container{
+   width: 100%;
+   margin: 0 auto;
+}
+.hero-img-container img{
+    width: 80%;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+@media (min-width:1200px) and (max-width:1520px) {
+    .hero-title {
+        max-width:70% ;
+        
+        margin-top: 1rem;
+        font-size: 76px;
+        text-align: center;
+        line-height: 70px;
+        font-weight: 500;
+        background: linear-gradient(90deg, #b8b8b8, #e5e5e5, #b8b8b8);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent; /* This makes the gradient visible */
+        padding: 1rem;
+        margin: 0 auto;
+    }
+    
+}
+@media (min-width:850px) and (max-width:1200px) {
+    .hero-title {
+        max-width:75% ;
+        
+        margin-top: 1rem;
+        font-size: 76px;
+        text-align: center;
+        line-height: 70px;
+        font-weight: 500;
+        background: linear-gradient(90deg, #b8b8b8, #e5e5e5, #b8b8b8);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent; /* This makes the gradient visible */
+        padding: 1rem;
+        margin: 0 auto;
+    }
+    
+}
+@media (min-width:520px) and (max-width:850px) {
+    .hero-title {
+        max-width:95% ;
+        
+        margin-top: 1rem;
+        font-size: 64px;
+        text-align: center;
+        line-height: 70px;
+        font-weight: 500;
+        background: linear-gradient(90deg, #b8b8b8, #e5e5e5, #b8b8b8);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent; /* This makes the gradient visible */
+        padding: 1rem;
+        margin: 0 auto;
+    }
+    
+}
+@media (min-width:00px) and (max-width:520px) {
+    .hero-title {
+        max-width: 95%;
+        margin-top: 1rem;
+        font-size: 48px;
+        text-align: center;
+        line-height: 45px;
+        font-weight: 500;
+        background: linear-gradient(90deg, #b8b8b8, #e5e5e5, #b8b8b8);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+        padding: 1rem;
+        margin: 0 auto;
+    }
+
+    
+}
