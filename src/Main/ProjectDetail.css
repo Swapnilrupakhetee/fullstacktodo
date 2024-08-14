@@ -46,6 +46,7 @@
    gap: 1rem;
    margin-top: 3rem;
     display: flex;
+    background-color: black;
     padding-bottom: 3rem;
   }
   .todo-list{
