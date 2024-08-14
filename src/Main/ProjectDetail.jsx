@@ -10,12 +10,15 @@ import { GoDotFill } from "react-icons/go";
 import { MdAddToPhotos } from "react-icons/md";
 import { MdOutlineModeEditOutline } from "react-icons/md";
 import { TiDeleteOutline } from "react-icons/ti";
+
 const ProjectDetails = () => {
   const { projectName } = useParams();
   const [todos, setTodos] = useState(() => {
     const savedTodos = localStorage.getItem(`todos-${projectName}`);
     return savedTodos ? JSON.parse(savedTodos) : [];
   });
+  const [searchTerm, setSearchTerm] = useState(''); // State to manage search term
+  const [filteredTodos, setFilteredTodos] = useState(todos); // State to manage filtered todos
   const [showAddModal, setShowAddModal] = useState(false);
   const [showEditModal, setShowEditModal] = useState(false);
   const [newTodo, setNewTodo] = useState('');
@@ -23,10 +26,14 @@ const ProjectDetails = () => {
   const [priority, setPriority] = useState('low');
   const [currentEditIndex, setCurrentEditIndex] = useState(null);
   const [issuedDate, setIssuedDate] = useState('');
+  const [sortOption, setSortOption] = useState('name'); // Default sorting by task name
 
   useEffect(() => {
     localStorage.setItem(`todos-${projectName}`, JSON.stringify(todos));
-  }, [todos, projectName]);
+    setFilteredTodos(todos.filter(todo =>
+      todo.name.toLowerCase().includes(searchTerm.toLowerCase())
+    ));
+  }, [todos, projectName, searchTerm]);
 
   const addTodo = () => {
     if (newTodo.trim() !== '') {
@@ -42,6 +49,22 @@ const ProjectDetails = () => {
       setEndDate('');
       setPriority('low');
       setShowAddModal(false); // Close the modal after adding
+    }
+  };
+
+  const sortTodos = (todos, option) => {
+    switch (option) {
+      case 'name':
+        return todos.sort((a, b) => a.name.localeCompare(b.name));
+      case 'status':
+        return todos.sort((a, b) => a.status.localeCompare(b.status));
+      case 'dueDate':
+        return todos.sort((a, b) => new Date(a.endDate) - new Date(b.endDate));
+      case 'priority':
+        const priorityOrder = { low: 1, mid: 2, high: 3 };
+        return todos.sort((a, b) => priorityOrder[a.priority] - priorityOrder[b.priority]);
+      default:
+        return todos;
     }
   };
 
@@ -83,6 +106,8 @@ const ProjectDetails = () => {
     setShowEditModal(true);
   };
 
+  const sortedTodos = sortTodos([...filteredTodos], sortOption); // Sort filtered todos based on the selected option
+
   return (
     <div className="project-details">
       <Navbar />
@@ -95,43 +120,57 @@ const ProjectDetails = () => {
               <input
                 type="text"
                 placeholder="Search..."
-                value={newTodo}
-                onChange={(e) => setNewTodo(e.target.value)}
+                value={searchTerm} // Bind the searchTerm state to the input
+                onChange={(e) => setSearchTerm(e.target.value)} // Update searchTerm state on input change
               />
               <div className="search-button">
                 <GoSearch className='sea' />
               </div>
             </div>
+
+            <select value={sortOption} onChange={(e) => setSortOption(e.target.value)} className='sort-select'>
+              <option value="name">Sort by Name</option>
+              <option value="status">Sort by Status</option>
+              <option value="dueDate">Sort by Due Date</option>
+              <option value="priority">Sort by Priority</option>
+            </select>
+
             <button className="addtodo" onClick={() => setShowAddModal(true)}><MdAddToPhotos /></button>
           </div>
 
           <ul>
-            {todos.map((todo, index) => (
+            {sortedTodos.map((todo, index) => (
               <li key={index} className="todo-item">
                 <div className='list-container'>
                   <strong>{todo.name}</strong>
                   <div>End Date: {todo.endDate}</div>
                   <div className="todo-right-container">
-                  <div>
-                   
-                    <select
-                      value={todo.status}
-                      onChange={(e) => changeStatus(index, e.target.value)}
-                      className='todo-select'
-                    >
-                      <option value="in progress" className='value1'><GoDotFill style={{color:'red',fontSize:'2rem'}} /> In Progress</option>
-                      <option value="completed" className='value2'><GoDotFill style={{color:'red',fontSize:'2rem'}} /> Completed <GoDotFill /></option>
-                    </select>
+                    <div>
+                      <select
+                        value={todo.status}
+                        onChange={(e) => changeStatus(index, e.target.value)}
+                        className='todo-select'
+                      >
+                        <option value="in progress" className='value1'>
+                          <GoDotFill style={{ color: 'red', fontSize: '2rem' }} /> In Progress
+                        </option>
+                        <option value="completed" className='value2'>
+                          <GoDotFill style={{ color: 'green', fontSize: '2rem' }} /> Completed
+                        </option>
+                      </select>
+                    </div>
+                    <button onClick={() => openEditModal(index)}>
+                      <MdOutlineModeEditOutline className='edit' />
+                    </button>
+                    <button onClick={() => deleteTodo(index)}>
+                      <TiDeleteOutline className='delete' />
+                    </button>
                   </div>
-                  <button onClick={() => openEditModal(index)} ><MdOutlineModeEditOutline className='edit'/></button>
-                  <button onClick={() => deleteTodo(index)}><TiDeleteOutline className='delete'/></button>
                 </div>
-
-                  </div>
-                
               </li>
             ))}
           </ul>
+
         </div>
         <div className="music-right">
           <iframe
@@ -200,9 +239,6 @@ const ProjectDetails = () => {
               <option value="mid">Mid</option>
               <option value="high">High</option>
             </select>
-            <div className='issued'>
-              <IoTimeOutline className='dates' /> {issuedDate}  {/* Display the issued date only in the edit modal */}
-            </div>
             <div className="modal-buttons">
               <button onClick={editTodo} className='modaladd'>Save Changes</button>
               <button onClick={() => setShowEditModal(false)} className='modalcancel'>Cancel</button>
@@ -213,6 +249,6 @@ const ProjectDetails = () => {
       )}
     </div>
   );
-}
+};
 
 export default ProjectDetails;

@@ -40,6 +40,9 @@
   .work{
     color: rgb(255, 251, 39);
   }
+  .sort-select{
+    background-color: black;
+  }
 
   .mid-contents{
     justify-content: center;
