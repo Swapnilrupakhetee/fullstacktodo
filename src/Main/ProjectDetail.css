@@ -46,6 +46,7 @@
    gap: 1rem;
    margin-top: 3rem;
     display: flex;
+    padding-bottom: 3rem;
   }
   .todo-list{
     background-color: rgba(73, 73, 73, 0.26);
@@ -95,3 +96,178 @@
     cursor: pointer;
     font-size: 2rem;
   }
+
+
+  /*Modals*/
+  .modal1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background: rgba(0, 0, 0, 0.712);
+    display: flex;
+    justify-content: center;
+    
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal1-content {
+    background: rgba(39, 39, 39, 0.959);
+    border: 2px solid rgb(104, 104, 104);
+    box-shadow: 2px 2px 2px rgb(83, 82, 82);
+    padding: 20px;
+    border-radius: 5px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+   
+
+    text-align: center;
+  }
+  
+  .modal1-content input {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: rgb(49, 49, 49);
+    margin-bottom: 1rem;
+  }
+  .modal1-content h2{
+    background-color: rgba(61, 61, 61, 0.356);
+    padding: 10px 20px;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    border: 1px solid rgb(202, 202, 202);
+  }
+  .modal1-content select{
+    width: 90%;
+    margin: 0 auto;
+    background-color: black;
+    height: 30px;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+  }
+  
+  .modal-content button {
+    margin: 5px;
+    padding: 10px 20px;
+  }
+  .modaladd{
+    background-color: rgba(97, 100, 97, 0.192);
+    border-radius: 6px;
+    padding: 10px 20px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    
+
+  }
+  .modaladd:hover{
+    background-color: rgba(97, 100, 97, 0.411);
+    border-radius: 6px;
+    padding: 10px 20px;
+    transition: 0.3s ease-in-out;
+    
+
+  }
+  .modalcancel{
+    border: 1px solid white;
+    border-radius: 6px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+  .modalcancel:hover{
+    border: 1px solid white;
+    background-color: rgba(70, 70, 70, 0.322);
+    border-radius: 6px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+  .modal-buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+.issued{
+  background-color: rgba(88, 88, 88, 0.164);
+  
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  border: 1px solid rgb(189, 189, 189);
+}
+
+
+
+
+.list-container{
+  
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  border: 1px solid rgb(145, 145, 145);
+}
+
+.todo-right-container{
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+.todo-select{
+  background-color: black;
+  border: 1px solid rgb(175, 175, 175);
+  padding: 2px 5px;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+}
+
+
+.value1{
+  color: red;
+}
+.value2{
+  color: green;
+}
+.edit{
+  font-size: 2rem;
+  color: rgb(172, 172, 172);
+}
+.delete{
+  font-size: 2rem;
+  color: red;
+}
+
+  @media (min-width:00px) and (max-width:1100px) {
+    .mid-contents{
+      display: flex;
+      flex-direction: column;
+      background-color: black;
+    }
+    .todo-list{
+      width: 95%;
+      margin: 0 auto;
+    }
+    .music-right{
+      width: 95%;
+      margin: 0 auto;
+    }
+   
+}
