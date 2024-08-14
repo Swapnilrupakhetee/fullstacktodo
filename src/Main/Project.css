@@ -139,3 +139,57 @@
 
     
   }
+
+
+  /*Light dark mode*/
+  .light-mode .project-container{
+    background-color: white;
+  }
+  .light-mode .project-info{
+    background-color: rgba(88, 88, 88, 0.062);
+    border: 1px solid black;
+    color: black;
+  }
+  .light-mode .new-project{
+    background-color: rgba(88, 88, 88, 0.062);
+    border: 1px solid black;
+    color: black;
+  }
+  .light-mode .project-details{
+    background-color: white;
+  }
+  .light-mode .project-title-todo{
+    color: black;
+  }
+  .light-mode .mid-contents{
+    background-color: white;
+    color: black;
+  }
+  .light-mode .todo-list {
+    background-color: rgb(255 255 255 / 26%);
+    border-radius: 10px;
+    border: 1px solid rgb(39, 39, 39);
+    width: 75%;
+    box-shadow: 2px 2px 2px grey;
+}
+.light-mode .search {
+  display: flex;
+  background-color: rgb(255 255 255 / 27%);
+  color: black;
+  border-radius: 10px;
+  padding: 5px 20px;
+  align-items: center;
+  width: 90%;
+  border: 1px solid;
+}
+.light-mode .sort-select {
+  background-color: white;
+}
+.light-mode .todo-select {
+  background-color: white;
+  border: 1px solid rgb(175, 175, 175);
+  padding: 2px 5px;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+}

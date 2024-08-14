@@ -1,11 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import Lottie from 'react-lottie';
 import { BsPlusSquareDotted } from "react-icons/bs";
 import { Link } from 'react-router-dom'; // Import Link for navigation
 import './Project.css';
 import addvid from '../assets/add.json';
+import { ThemeContext } from '../Context/ThemeContext';
 
 const Project = () => {
+
+    const {isDarkMode,toggleTheme}=useContext(ThemeContext);
+
   const [projects, setProjects] = useState(() => {
     const savedProjects = localStorage.getItem('projects');
     return savedProjects ? JSON.parse(savedProjects) : [{ name: 'Default Project' }];

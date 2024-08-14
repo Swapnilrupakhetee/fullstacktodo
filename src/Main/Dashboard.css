@@ -52,3 +52,16 @@
     color: white;
     transition: 0.3s ease-in-out;
 }
+/* Example CSS for dark mode */
+.dark-mode .dnav-links {
+    background-color: #333; /* Dark background for dark mode */
+    color: #fff; /* Light text color for dark mode */
+  }
+  
+  .light-mode .dnav-links {
+    background-color: #fff; /* Light background for light mode */
+    color: #000; /* Dark text color for light mode */
+  }
+  .light-mode .dash-content{
+    background-color: white;
+  }
