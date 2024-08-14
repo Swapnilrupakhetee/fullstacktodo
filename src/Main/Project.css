@@ -193,3 +193,73 @@
   align-items: center;
   border-radius: 4px;
 }
+.light-mode .modal1-content {
+  background: rgb(255 255 255 / 96%);
+  border: 2px solid rgb(104, 104, 104);
+  box-shadow: 2px 2px 2px rgb(83, 82, 82);
+  padding: 20px;
+  border-radius: 5px;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.light-mode .modal1-content h2 {
+  background-color: rgb(255 255 255 / 36%);
+  padding: 10px 20px;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  border: 1px solid rgb(96 96 96);
+  color: black;
+}
+.light-mode .modal1-content input {
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 10px;
+  background-color: rgb(222 222 222);
+  margin-bottom: 1rem;
+  color: black;
+}
+.light-mode .modaladd {
+  background-color: rgb(219 219 219);
+  border-radius: 6px;
+  padding: 10px 20px;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  color: black;
+}
+.light-mode .modal1-content select {
+  width: 90%;
+  margin: 0 auto;
+  background-color: #e0e0e0;
+  height: 30px;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  color: black;
+}
+.light-mode .modalcancel {
+  border: 1px solid black;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  color: black;
+}
+.light-mode .modal-content {
+  background: rgb(255 255 255 / 96%);
+  border: 2px solid rgb(104, 104, 104);
+  box-shadow: 2px 2px 2px rgb(83, 82, 82);
+  padding: 20px;
+  border-radius: 5px;
+  min-width: 300px;
+  text-align: center;
+}
+.light-mode .modal-content input {
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 80%;
+  border-radius: 10px;
+  background-color: lightgrey;
+  color: black;
+}

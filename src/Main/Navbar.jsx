@@ -19,7 +19,7 @@ const Navbar = () => {
           <div className="dnav-link"><IoStatsChartOutline /></div>
           <div className="dnav-link"><IoSettingsOutline /></div>
           <div className="dnav-link" onClick={toggleTheme}>
-            <MdOutlineLightMode style={{ color: isDarkMode ? 'yellow' : 'white' }} />
+            <MdOutlineLightMode style={{ color: isDarkMode ? 'yellow' : 'black' }} />
           </div>
           <div className="dnav-link"><img src={swapnil} alt="" /></div>
         </div>
